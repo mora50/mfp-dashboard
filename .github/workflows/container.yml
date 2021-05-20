@@ -1,4 +1,4 @@
-name: deploy-containerrrr
+name: deploy-container
 
 on:
   push:
@@ -6,7 +6,6 @@ on:
       - master
     paths:
       - 'packages/container/**'
-
 defaults:
   run:
     working-directory: packages/container
