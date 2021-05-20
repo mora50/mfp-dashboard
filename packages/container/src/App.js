@@ -4,7 +4,7 @@ import MarketingApp from './components/MarketingApp';
 function App(props) {
   return (
     <div>
-      <h1>hi therevvvvvvv</h1>
+      <h1>hi therevvv</h1>
       <hr />
       <MarketingApp />
     </div>
