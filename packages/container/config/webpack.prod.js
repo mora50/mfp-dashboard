@@ -10,7 +10,7 @@ const prodConfig = {
   output: {
     //the template of the name of the archive, for caching issues
     filename: '[name].[contenthash].js',
-    publicPath: '/container/latest',
+    publicPath: '/container/latest/',
   },
   plugins: [
     new ModuleFederationPlugin({
