@@ -2,9 +2,7 @@ name: deploy-containerr
 
 on:
   push:
-    branches:
-      - master
-      - main
+    branches: [ master ]
     paths:
       - 'packages/container/**'
 
