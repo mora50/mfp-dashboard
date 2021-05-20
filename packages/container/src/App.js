@@ -1,7 +1,7 @@
 import React from 'react';
 import MarketingApp from './components/MarketingApp';
 
-function App(props) {
+function App() {
   return (
     <div>
       <h1>hi thereevvdddd</h1>
