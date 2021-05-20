@@ -95,9 +95,7 @@ export default function Landing() {
               <Grid container spacing={2} justify='center'>
                 <Grid item>
                   <Link to='/pricing'>
-                    <Button variant='contained' color='primary'>
-                      Pricing
-                    </Button>
+                    <TestStyled>Pricing</TestStyled>
                   </Link>
                 </Grid>
                 <Grid item>
