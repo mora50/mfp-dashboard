@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import App from './App';
 
 const mount = (el) => {
+  console.log('baixou');
   ReactDOM.render(<App />, el);
 };
 
