@@ -44,7 +44,7 @@ const mount = (el, { onNavigate, defaultHistory, initialPath }) => {
  call mount mmediately
  */
 if (process.env.NODE_ENV === 'development') {
-  const devRoot = document.querySelector('#_marketing-dev-root');
+  const devRoot = document.querySelector('#_auth-dev-root');
 
   /**
 

@@ -1,8 +1,8 @@
 import React, { useRef, useEffect } from 'react';
-import { mount } from 'marketing/MarketingApp';
+import { mount } from 'auth/AuthApp';
 import { useHistory } from 'react-router-dom';
 
-export default function MarketingApp() {
+export default function AuthApp() {
   const ref = useRef(null);
 
   //current browser history of container
@@ -13,11 +13,11 @@ export default function MarketingApp() {
       initialPath: history.location.pathname,
       /**
        
-       * @param {Object} location This obj has information where we are about to navigate to inside of marketing
+       * @param {Object} location This obj has information where we are about to navigate to inside of auth remote
        */
       onNavigate: (location) => {
         /**
-         * @constant {string} nextPathName this represents the path that our marketing app is attempting to navigate to
+         * @constant {string} nextPathName this represents the path that our auth app is attempting to navigate to
          */
         const nextPathName = location.pathname;
 
