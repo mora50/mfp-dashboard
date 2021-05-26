@@ -20,15 +20,15 @@ function App() {
           onSignOut={() => setIsSignedIn(false)}
           isSignedIn={isSignedIn}
         />
-        <Switch>
-          <Suspense fallback={<ProgressBar />}>
+        <Suspense fallback={<ProgressBar />}>
+          <Switch>
             <Route path='/auth'>
               <AuthApp onSignIn={() => setIsSignedIn(true)} />
             </Route>
 
-            <Route exact path='/' component={MarketingApp} />
-          </Suspense>
-        </Switch>
+            <Route path='/' component={MarketingApp} />
+          </Switch>
+        </Suspense>
       </StylesProvider>
     </BrowserRouter>
   );
