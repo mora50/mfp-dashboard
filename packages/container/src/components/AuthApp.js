@@ -2,7 +2,7 @@ import React, { useRef, useEffect } from 'react';
 import { mount } from 'auth/AuthApp';
 import { useHistory } from 'react-router-dom';
 
-export default function AuthApp() {
+export default function AuthApp({ onSignIn }) {
   const ref = useRef(null);
 
   //current browser history of container
@@ -29,6 +29,7 @@ export default function AuthApp() {
           history.push(nextPathName);
         }
       },
+      onSignIn,
     });
 
     //updates the remote mfe when containers changes

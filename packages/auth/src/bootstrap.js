@@ -7,7 +7,7 @@ import { createMemoryHistory, createBrowserHistory } from 'history';
 onNavigate function is the callback for container, it's necessary to update the Browser history of container
 */
 
-const mount = (el, { onNavigate, defaultHistory, initialPath }) => {
+const mount = (el, { onSignIn, onNavigate, defaultHistory, initialPath }) => {
   //create the history object of micro-frontend URL
   const history =
     defaultHistory ||
@@ -20,7 +20,7 @@ const mount = (el, { onNavigate, defaultHistory, initialPath }) => {
     history.listen(onNavigate);
   }
 
-  ReactDOM.render(<App history={history} />, el);
+  ReactDOM.render(<App onSignIn={onSignIn} history={history} />, el);
 
   return {
     //this function listen when host frontend changes
