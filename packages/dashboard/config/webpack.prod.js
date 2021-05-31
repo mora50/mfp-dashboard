@@ -6,7 +6,6 @@ const packageJson = require('../package.json');
 const prodConfig = {
   mode: 'production',
   output: {
-    //the template of the name of the archive, for caching issues
     filename: '[name].[contenthash].js',
     publicPath: '/dashboard/latest/',
   },
