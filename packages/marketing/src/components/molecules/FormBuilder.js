@@ -6,8 +6,7 @@ import { Controller, useForm } from "react-hook-form";
 
 import { Container, Grid, Typography, Button } from "@material-ui/core";
 
-import DefaultInput from "./DefaultInput";
-import DefaultInputLabel from "./DefaultInputLabel";
+import { DefaultInput, DefaultInputLabel } from "../atoms";
 
 const FormBuilder = ({ formArray, title }) => {
   const {
@@ -35,7 +34,7 @@ const FormBuilder = ({ formArray, title }) => {
                 error={errors[input.name]}
                 label={input.label}
               />
-              
+
               <Controller
                 name={input.name}
                 control={control}
