@@ -37,7 +37,7 @@ const formArray = [
   },
 ];
 
-export default function Landing({ array }) {
+export default function Form({ array }) {
   return (
     <>
       <FormBuilder formArray={array ?? formArray} title="Novo Administrador" />

@@ -1,33 +1,34 @@
 //it's a func that allow's to us merge config between different webpack modes
-const { merge } = require('webpack-merge');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
-const commonConfig = require('./webpack.common');
-const ModuleFederationPlugin = require('webpack/lib/container/ModuleFederationPlugin');
+const { merge } = require("webpack-merge");
+const HtmlWebpackPlugin = require("html-webpack-plugin");
+const commonConfig = require("./webpack.common");
+const ModuleFederationPlugin = require("webpack/lib/container/ModuleFederationPlugin");
 
-const packageJson = require('../package.json');
+const packageJson = require("../package.json");
 
 const devConfig = {
-  mode: 'development',
+  mode: "development",
   output: {
-    publicPath: 'http://localhost:8081/',
+    publicPath: "http://localhost:8081/",
   },
   devServer: {
     port: 8081,
     historyApiFallback: {
-      index: '/index.html',
+      index: "/index.html",
     },
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: './public/index.html',
+      template: "./public/index.html",
     }),
 
     new ModuleFederationPlugin({
-      name: 'marketing',
-      filename: 'remoteEntry.js',
+      name: "marketing",
+      filename: "remoteEntry.js",
       exposes: {
-        './MarketingApp': './src/bootstrap',
-        './BreadCrumbs': './src/components/BreadCrumbs'
+        "./MarketingApp": "./src/bootstrap",
+        "./Form": "./src/components/Form",
+        "./BreadCrumbs": "./src/components/BreadCrumbs",
       },
       shared: packageJson.dependencies,
     }),

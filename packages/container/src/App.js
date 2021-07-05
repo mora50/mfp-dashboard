@@ -7,7 +7,7 @@ const DashboardApp = lazy(() => import("./components/DashboardApp"));
 import Header from "./components/Header";
 import ProgressBar from "./components/ProgressBar";
 import { createBrowserHistory } from "history";
-const Form = lazy(() => import("./components/Form"));
+const PageAdm = lazy(() => import("./components/PageAdm"));
 
 const generateClassName = createGenerateClassName({
   productionPrefix: "co",
@@ -42,7 +42,7 @@ function App() {
               <DashboardApp />
             </Route>
 
-            <Route path="/" component={Form} />
+            <Route path="/" component={PageAdm} />
           </Switch>
         </Suspense>
       </StylesProvider>
