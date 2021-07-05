@@ -4,9 +4,9 @@ import { v4 as uuidv4 } from "uuid";
 import InputMask from "react-input-mask";
 import { Controller, useForm } from "react-hook-form";
 
-import { Container, Grid, Typography, Button } from "@material-ui/core";
+import { Container, Grid, Typography, Button, Box } from "@material-ui/core";
 
-import { DefaultInput, DefaultInputLabel } from "../atoms";
+import { DefaultInput, DefaultInputLabel } from "../../atoms";
 
 const FormBuilder = ({ formArray, title }) => {
   const {
@@ -25,7 +25,7 @@ const FormBuilder = ({ formArray, title }) => {
       <form onSubmit={handleSubmit(onSubmit)}>
         <Grid container spacing={4}>
           <Grid item xs={12}>
-            <Typography variant="h3">{title}</Typography>
+            <Typography variant="h5">{title}</Typography>
           </Grid>
 
           {formArray.map((input) => (
@@ -61,11 +61,13 @@ const FormBuilder = ({ formArray, title }) => {
           ))}
         </Grid>
 
-        <Grid item xs={12}>
-          <Button variant="contained" color="primary" type="submit">
-            Enviar
-          </Button>
-        </Grid>
+        <Box mt={2}>
+          <Grid container alignItems="center" justify="center" item xs={12}>
+            <Button variant="contained" color="primary" type="submit">
+              Enviar
+            </Button>
+          </Grid>
+        </Box>
       </form>
     </Container>
   );

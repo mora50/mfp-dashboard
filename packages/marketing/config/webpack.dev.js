@@ -27,6 +27,7 @@ const devConfig = {
       filename: 'remoteEntry.js',
       exposes: {
         './MarketingApp': './src/bootstrap',
+        './BreadCrumbs': './src/components/BreadCrumbs'
       },
       shared: packageJson.dependencies,
     }),

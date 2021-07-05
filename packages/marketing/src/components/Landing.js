@@ -1,6 +1,6 @@
 import React from "react";
 
-import { FormBuilder } from "./molecules";
+import { FormBuilder } from "./molecules/FormBuilder";
 
 const formArray = [
   {

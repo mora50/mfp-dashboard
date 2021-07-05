@@ -1,6 +1,6 @@
-import React from 'react';
- 
-import { Typography } from '@material-ui/core';
+import React from "react";
+
+import { Typography } from "@material-ui/core";
 
 /**
  * Component to display input label
@@ -9,34 +9,23 @@ import { Typography } from '@material-ui/core';
  * @param { string } label: input label;
  * }
  */
- 
+
 // interface Props {
 //   error: boolean;
 //   label: string;
 // }
- 
+
 // const DefaultInputLabel: React.FC<Props> = ({
 //   error,
 //   label,
 // }): JSX.Element => {
- 
-const DefaultInputLabel = ({
-  error,
-  label,
-}) => {
- 
+
+const DefaultInputLabel = ({ error, label }) => {
   const colorField = () => {
-    return error ? { color: '#f44336' } : {};
+    return error ? { color: "#f44336" } : {};
   };
- 
-  return (
-    <Typography
-      variant="h5"
-      style={colorField()}
-    >
-      {label}
-    </Typography>
-  );
+
+  return <Typography style={colorField()}>{label}</Typography>;
 };
- 
+
 export default DefaultInputLabel;

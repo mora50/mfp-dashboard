@@ -74,7 +74,7 @@ const DefaultInput = (props) => {
     <TextField
       {...props}
       variant="outlined"
-      size="medium"
+      size="small"
       name={name}
       fullWidth
       type={type}
